@@ -136,7 +136,7 @@ resource "aws_instance" "autogpt_server" {
     inline = [
       "sudo yum -y update",
       "sudo yum -y upgrade",
-      "sudo yum -y install docker git",
+      "sudo yum -y install docker git screen",
       "sudo systemctl start docker",
       "sudo systemctl enable docker",
       "sudo usermod -aG docker $(whoami)"
